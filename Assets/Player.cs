@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     //private int _gauge;
     private bool _canMove = true;
+
+    private Gauge _gauge;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
