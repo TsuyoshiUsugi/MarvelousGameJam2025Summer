@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             _canMove = false;
-
+            Damaged();
         }
     }
     private void Move()
