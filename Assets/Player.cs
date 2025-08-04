@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] int MiddlePosision = 5;
     [SerializeField] int LowPosision = 0;
     [SerializeField] int DamagedTime;
+    [SerializeField] int SobaValue;
 
     private int _gauge;
     private bool _canMove;
