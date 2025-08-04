@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -48,5 +49,10 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(0, LowPosision, 0);
         }
+    }
+    IEnumerator Damaged()
+    {
+        yield return new WaitForSeconds(DamagedTime);
+        _canMove = true;
     }
 }
