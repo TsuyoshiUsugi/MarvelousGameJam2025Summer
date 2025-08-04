@@ -30,7 +30,11 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Soba"))
         {
-
+            _gauge += SobaValue;
+        }
+        if (other.gameObject.CompareTag("Toys"))
+        {
+            _gauge -= ToysValue;
         }
         if (other.gameObject.CompareTag("Obstacle"))
         {
