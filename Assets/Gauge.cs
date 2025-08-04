@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI : MonoBehaviour
+public class Gauge : MonoBehaviour
 {
     [SerializeField] int MaxGauge;
     [SerializeField] int MinGauge;
