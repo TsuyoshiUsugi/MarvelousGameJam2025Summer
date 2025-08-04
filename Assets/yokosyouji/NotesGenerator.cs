@@ -1,5 +1,7 @@
 using System;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class NotesGenerator : MonoBehaviour
 {
@@ -9,9 +11,11 @@ public class NotesGenerator : MonoBehaviour
     //[SerializeField] GameObject _toys;
     //[SerializeField] GameObject _obstacle;
     //¶¬ˆÊ’u
-    [SerializeField] GameObject _points;
+    [SerializeField] GameObject[] _points;
 
-    [SerializeField] float _generateTime= 3f;
+    [SerializeField] float _generateTime = 3f;
+    
+    
     float _count;
     
     void Start()
@@ -25,9 +29,11 @@ public class NotesGenerator : MonoBehaviour
         _count += Time.deltaTime;
         if (_count > _generateTime)
         {
-            Instantiate(_soba,_points.transform.position,Quaternion.identity);
+            System.Random _random = new System.Random();
+            int num =_random.Next(0,3);
+            Instantiate(_soba, _points[num].transform.position,Quaternion.identity);
 
-
+            Debug.Log(num);
             _count = 0;
         }
 
