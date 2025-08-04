@@ -8,10 +8,6 @@ public class Player : MonoBehaviour
     [SerializeField] int MiddlePosision = 5;
     [SerializeField] int LowPosision = 0;
     [SerializeField] int DamagedTime = 2;
-    //[SerializeField] int MaxGauge;
-    //[SerializeField] int MinGauge;
-    //[SerializeField] int SobaValue;
-    //[SerializeField] int ToysValue;
 
     //private int _gauge;
     private bool _canMove = true;
@@ -24,6 +20,7 @@ public class Player : MonoBehaviour
     {
         _gauge = FindAnyObjectByType<Gauge>();
         OnGameOver += () => { Debug.Log("GameOver"); };//+=することで関数の中に処理を追加できる
+        _gauge.SetGauge();
     }
 
     // Update is called once per frame
@@ -33,7 +30,7 @@ public class Player : MonoBehaviour
         {
             Move();
         }
-        if ( _gauge._gaugeValue> _gauge.MaxGauge || _gauge._gaugeValue < _gauge.MinGauge)
+        if ( _gauge.GaugeValue> _gauge.MaxGauge || _gauge.GaugeValue < _gauge.MinGauge)
         {
             Debug.Log("ゲームオーバー");
             OnGameOver?.Invoke();
@@ -43,11 +40,13 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Soba"))
         {
-            _gauge._gaugeValue += _gauge.SobaValue;
+            _gauge.GaugeValue += _gauge.SobaValue;
+            _gauge.SetGauge();
         }
         if (other.gameObject.CompareTag("Toys"))
         {
-            _gauge._gaugeValue -= _gauge.ToysValue;
+            _gauge.GaugeValue -= _gauge.ToysValue;
+            _gauge.SetGauge();
         }
         if (other.gameObject.CompareTag("Obstacle"))
         {
