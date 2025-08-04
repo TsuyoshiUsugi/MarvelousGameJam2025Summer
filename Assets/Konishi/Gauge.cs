@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gauge : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Gauge : MonoBehaviour
     public int ToysValue;
 
     public int _gaugeValue;
+
+    private Image _image;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
