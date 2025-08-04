@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour
+public class OperatingInstructions : MonoBehaviour
 {
     [SerializeField] private Image _manualImage;
     bool _imageBool=false;
