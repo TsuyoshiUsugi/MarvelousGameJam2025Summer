@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
+    [SerializeField] int MaxGauge;
+    [SerializeField] int MinGauge;
+    [SerializeField] int SobaValue;
+    [SerializeField] int ToysValue;
+
+    private int _gauge;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
