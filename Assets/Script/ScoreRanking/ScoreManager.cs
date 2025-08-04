@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
     private int _score;
-    [SerializeField] Text _scoreText;
+    [SerializeField] private Text _scoreText;
     
     public void ScoreAdd(int addScore)
     {

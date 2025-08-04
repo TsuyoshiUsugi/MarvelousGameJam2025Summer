@@ -5,7 +5,7 @@ public class GaugeManager : SingletonMonoBehaviour<GaugeManager>
 {
     private int _gaugeValue;
     [SerializeField] private int _maxGaugeValue;
-    [SerializeField] Image _gaugeImage;
+    [SerializeField] private Image _gaugeImage;
     
     public void GaugeChange(int changeValue)
     {
