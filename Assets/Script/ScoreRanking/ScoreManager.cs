@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
-    private int _score;
+    public int Score { get;private set; }
     [SerializeField] private Text _scoreText;
     
     /// <summary>
@@ -13,7 +13,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     /// <param name="addScore">変化量</param>
     public void ScoreAdd(int addScore)
     {
-        _score += addScore;
-        _scoreText.text = _score.ToString();
+        Score += addScore;
+        _scoreText.text = Score.ToString();
     }
 }
