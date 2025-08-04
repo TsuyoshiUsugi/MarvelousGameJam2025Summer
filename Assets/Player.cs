@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,10 +17,13 @@ public class Player : MonoBehaviour
     private bool _canMove = true;
 
     private Gauge _gauge;
+
+    public Action OnGameOver;//中身、引数、戻り値なしの関数
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _gauge = FindAnyObjectByType<Gauge>();
+        OnGameOver += () => { Debug.Log("GameOver"); };//+=することで関数の中に処理を追加できる
     }
 
     // Update is called once per frame
@@ -29,20 +33,21 @@ public class Player : MonoBehaviour
         {
             Move();
         }
-        if (_gauge > MaxGauge || _gauge < MinGauge)
+        if ( _gauge._gaugeValue> _gauge.MaxGauge || _gauge._gaugeValue < _gauge.MinGauge)
         {
             Debug.Log("ゲームオーバー");
+            OnGameOver?.Invoke();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Soba"))
         {
-            _gauge += SobaValue;
+            _gauge._gaugeValue += _gauge.SobaValue;
         }
         if (other.gameObject.CompareTag("Toys"))
         {
-            _gauge -= ToysValue;
+            _gauge._gaugeValue -= _gauge.ToysValue;
         }
         if (other.gameObject.CompareTag("Obstacle"))
         {
