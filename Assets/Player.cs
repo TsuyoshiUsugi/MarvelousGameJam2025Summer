@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] int ToysValue;
 
     private int _gauge;
-    private bool _canMove;
+    private bool _canMove = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
         if (_canMove)
         {
             Move();
+        }
+        if (_gauge > MaxGauge || _gauge < MinGauge)
+        {
+            Debug.Log("ゲームオーバー");
         }
     }
     private void OnTriggerEnter(Collider other)
