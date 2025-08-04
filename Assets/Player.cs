@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     [SerializeField] int HighPosision = 10;
     [SerializeField] int MiddlePosision = 5;
     [SerializeField] int LowPosision = 0;
-    [SerializeField] int
+    [SerializeField] int DamagedTime;
 
     private bool _canMove;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             _canMove = false;
+
         }
     }
     private void Move()
