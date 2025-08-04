@@ -5,8 +5,9 @@ using UnityEngine;
 /// <typeparam name="T">MonoBehaviourを継承している型のみ指定</typeparam>
 public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
+    [SerializeField] private bool DDOL;
+    
     private static T _instance;
-
     public static T Instance
     {
         get
@@ -27,6 +28,10 @@ public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBe
     protected void Awake()
     {
         CheckInstance();
+        if (DDOL)
+        {
+            DontDestroyOnLoad(this);
+        }   
     }
     
     protected bool CheckInstance()
