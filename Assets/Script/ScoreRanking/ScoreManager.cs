@@ -1,11 +1,12 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
     public int Score { get;private set; }
-    [SerializeField] private Text _scoreText;
+    public Action<int> OnChangeScore;
     
     /// <summary>
     /// わんこそばを食べた量を増やす
@@ -14,6 +15,11 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     public void ScoreAdd(int addScore)
     {
         Score += addScore;
-        _scoreText.text = Score.ToString();
+        OnChangeScore?.Invoke(Score);
+    }
+
+    public void ScoreReset()
+    {
+        Score = 0;
     }
 }
