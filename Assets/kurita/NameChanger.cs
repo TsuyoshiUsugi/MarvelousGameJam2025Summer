@@ -4,8 +4,9 @@ public class NameChanger : MonoBehaviour
 {
     public void NameChange(string s)
     {
-
-       NameManeger.Instance.Name = s;
+        if (s == string.Empty)
+            s = "NoName";
+        NameManeger.Instance.Name = s;
 
 
     }
