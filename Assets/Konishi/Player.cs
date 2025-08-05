@@ -16,13 +16,13 @@ public class Player : MonoBehaviour
     private Gauge _gauge;
     private AudioSource _audioSource;
 
-    public Action OnGameOver;//���g�A�����A�߂�l�Ȃ��̊֐�
+    public Action OnGameOver;//引数戻り値なしの関数を作成
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _gauge = FindAnyObjectByType<Gauge>();
         _audioSource = GetComponent<AudioSource>();
-        OnGameOver += () => { Debug.Log("GameOver"); };//+=���邱�ƂŊ֐��̒��ɏ�����ǉ��ł���
+        OnGameOver += () => { Debug.Log("GameOver"); };//+=で関数の中に処理を追加できる
     }
 
     // Update is called once per frame
