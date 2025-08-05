@@ -14,12 +14,12 @@ public class Player : MonoBehaviour
 
     private Gauge _gauge;
 
-    public Action OnGameOver;//’†gAˆø”A–ß‚è’l‚È‚µ‚ÌŠÖ”
+    public Action OnGameOver;//ï¿½ï¿½ï¿½gï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ß‚ï¿½lï¿½È‚ï¿½ï¿½ÌŠÖï¿½
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _gauge = FindAnyObjectByType<Gauge>();
-        OnGameOver += () => { Debug.Log("GameOver"); };//+=‚·‚é‚±‚Æ‚ÅŠÖ”‚Ì’†‚Éˆ—‚ğ’Ç‰Á‚Å‚«‚é
+        OnGameOver += () => { Debug.Log("GameOver"); };//+=ï¿½ï¿½ï¿½é‚±ï¿½Æ‚ÅŠÖï¿½ï¿½Ì’ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½Å‚ï¿½ï¿½ï¿½
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         }
         if ( _gauge.GaugeValue> _gauge.MaxGauge || _gauge.GaugeValue < _gauge.MinGauge)
         {
-            Debug.Log("ƒQ[ƒ€ƒI[ƒo[");
+            Debug.Log("ï¿½Qï¿½[ï¿½ï¿½ï¿½Iï¿½[ï¿½oï¿½[");
             OnGameOver?.Invoke();
         }
     }
@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Soba"))
         {
             _gauge.GaugeValue += _gauge.SobaValue;
+            ScoreManager.Instance.ScoreAdd(1);
         }
         if (other.gameObject.CompareTag("Toys"))
         {

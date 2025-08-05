@@ -30,7 +30,7 @@ public class Ranking : SingletonMonoBehaviour<Ranking>
 
         _ranking.RankingList.Sort((x,y)=>y.Score - x.Score);
 
-        int count = _ranking.RankingList.Count > 2 ? 3 : _ranking.RankingList.Count;
+        int count = _ranking.RankingList.Count > _rankingView.Count ? _rankingView.Count : _ranking.RankingList.Count;
         for (int i = 0; i < count; i++) {
 
 
