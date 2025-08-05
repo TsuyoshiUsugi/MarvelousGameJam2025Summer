@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     [SerializeField] int MiddlePosision = 5;
     [SerializeField] int LowPosision = 0;
     [SerializeField] int DamagedTime = 2;
+    [SerializeField] AudioClip[] audioClips;
 
     //private int _gauge;
     private bool _canMove = true;
 
     private Gauge _gauge;
+    private AudioSource _audioSource;
 
     public Action OnGameOver;//���g�A�����A�߂�l�Ȃ��̊֐�
     // Start is called once before the first execution of Update after the MonoBehaviour is created
