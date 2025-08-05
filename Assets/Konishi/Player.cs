@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] int HighPosision = 10;
     [SerializeField] int MiddlePosision = 5;
     [SerializeField] int LowPosision = 0;
-    [SerializeField] int DamagedTime = 2;
+    [SerializeField] float DamagedTime = 2;
     [SerializeField] AudioClip[] audioClips;
 
     //private int _gauge;
