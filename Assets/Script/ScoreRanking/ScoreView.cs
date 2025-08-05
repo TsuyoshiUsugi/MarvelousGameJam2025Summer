@@ -19,7 +19,7 @@ public class ScoreView : MonoBehaviour
 
     void ChangeScore(int score)
     {
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString()+ "îtêHÇ◊ÇΩÅI" ;
     }
     
 }
