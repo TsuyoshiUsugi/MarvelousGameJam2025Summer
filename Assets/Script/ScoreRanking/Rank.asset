@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e6a66770032c749be36378fc0dbe6a, type: 3}
   m_Name: Rank
   m_EditorClassIdentifier: 
+  RankingList:
+  - UserName: yuio
+    Score: 700
+  - UserName: dfghjk
+    Score: 123
+  - UserName: yuio
+    Score: 35
+  - UserName: yuio
+    Score: 0
