@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RankingScriptableObject", menuName = "Scriptable Objects/RankingScriptableObject")]
 public class RankingScriptableObject : ScriptableObject
 {
-    [SerializeField] public List<UserData> ranking = new List<UserData>();
+    [SerializeField] public List<UserData> RankingList = new List<UserData>();
 }
 
 [Serializable]
