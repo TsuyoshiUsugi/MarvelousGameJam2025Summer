@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     {
         _gauge = FindAnyObjectByType<Gauge>();
         OnGameOver += () => { Debug.Log("GameOver"); };//+=‚·‚é‚±‚Æ‚ÅŠÖ”‚Ì’†‚Éˆ—‚ğ’Ç‰Á‚Å‚«‚é
-        _gauge.SetGauge();
     }
 
     // Update is called once per frame
@@ -41,12 +40,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Soba"))
         {
             _gauge.GaugeValue += _gauge.SobaValue;
-            _gauge.SetGauge();
         }
         if (other.gameObject.CompareTag("Toys"))
         {
             _gauge.GaugeValue -= _gauge.ToysValue;
-            _gauge.SetGauge();
         }
         if (other.gameObject.CompareTag("Obstacle"))
         {
