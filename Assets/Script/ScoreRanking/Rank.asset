@@ -13,9 +13,53 @@ MonoBehaviour:
   m_Name: Rank
   m_EditorClassIdentifier: 
   RankingList:
-  - UserName: yuio
-    Score: 700
-  - UserName: dfghjk
-    Score: 123
-  - UserName: 
+  - UserName: dfghj
+    Score: 8
+  - UserName: dfghj
+    Score: 8
+  - UserName: dfghj
+    Score: 7
+  - UserName: dfghj
+    Score: 7
+  - UserName: ghj
     Score: 2
+  - UserName: ghj
+    Score: 2
+  - UserName: 
+    Score: 0
+  - UserName: sdfgh
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: sdfgh
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
+  - UserName: 
+    Score: 0
