@@ -13,31 +13,31 @@ MonoBehaviour:
   m_Name: Rank
   m_EditorClassIdentifier: 
   RankingList:
-  - UserName: kuroda
-    Score: 84
-  - UserName: yoko
+  - UserName: KRD
     Score: 60
-  - UserName: koni
+  - UserName: YOKO
     Score: 30
-  - UserName: kuri
+  - UserName: KONI
     Score: 30
-  - UserName: hana
+  - UserName: KURI
     Score: 20
-  - UserName: matsu
+  - UserName: MATSU
     Score: 15
-  - UserName: ue
+  - UserName: UE
     Score: 12
-  - UserName: kunu
+  - UserName: KUNU
     Score: 6
-  - UserName: kan
+  - UserName: KAN
     Score: 6
-  - UserName: yama
+  - UserName: YAMA
     Score: 4
-  - UserName: mori
+  - UserName: MORI
     Score: 3
-  - UserName: mo-
+  - UserName: MO-
     Score: 2
-  - UserName: hana
+  - UserName: OGI
+    Score: 1
+  - UserName: HANA
     Score: 1
   - UserName: USG
     Score: 0

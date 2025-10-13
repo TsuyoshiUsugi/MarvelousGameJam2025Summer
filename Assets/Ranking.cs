@@ -19,17 +19,16 @@ public class Ranking : SingletonMonoBehaviour<Ranking>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (SceneManager.GetActiveScene().name != "result")
-            return;
+        if (SceneManager.GetActiveScene().name == "result")
+        {// リザルトシーンならデータを追加
+            UserData data = new();
 
-        UserData data = new();
+            data.UserName = NameManeger.Instance.Name;
 
-        data.UserName = NameManeger.Instance.Name;
+            data.Score = ScoreManager.Instance.Score;
 
-        data.Score = ScoreManager.Instance.Score;
-
-        _ranking.RankingList.Add(data);
-
+            _ranking.RankingList.Add(data);
+        }
         _ranking.RankingList.Sort((x, y) => y.Score - x.Score);
 
         int count = _ranking.RankingList.Count > _rankingView.Count ? _rankingView.Count : _ranking.RankingList.Count;
