@@ -13,53 +13,31 @@ MonoBehaviour:
   m_Name: Rank
   m_EditorClassIdentifier: 
   RankingList:
-  - UserName: dfghj
-    Score: 8
-  - UserName: dfghj
-    Score: 8
-  - UserName: dfghj
-    Score: 7
-  - UserName: dfghj
-    Score: 7
-  - UserName: ghj
+  - UserName: kuroda
+    Score: 84
+  - UserName: yoko
+    Score: 60
+  - UserName: koni
+    Score: 30
+  - UserName: kuri
+    Score: 30
+  - UserName: hana
+    Score: 20
+  - UserName: matsu
+    Score: 15
+  - UserName: ue
+    Score: 12
+  - UserName: kunu
+    Score: 6
+  - UserName: kan
+    Score: 6
+  - UserName: yama
+    Score: 4
+  - UserName: mori
+    Score: 3
+  - UserName: mo-
     Score: 2
-  - UserName: ghj
-    Score: 2
-  - UserName: 
-    Score: 0
-  - UserName: sdfgh
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: sdfgh
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
-    Score: 0
-  - UserName: 
+  - UserName: hana
+    Score: 1
+  - UserName: USG
     Score: 0
